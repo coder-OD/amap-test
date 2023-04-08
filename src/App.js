@@ -20,8 +20,8 @@ const  getLocation = () => {
 const  showPosition = async (position) => {
   const longitude = position.coords.longitude.toFixed(6);
   const latitude = position.coords.latitude.toFixed(6);
-  // const cityUrl = `https://restapi.amap.com/v3/geocode/regeo?location=${longitude},${latitude}&key=5fc7b9a2033de8eca006799d9d9b967e`;
-  const cityUrl = `https://restapi.amap.com/v3/geocode/regeo?location=113.191982,23.0987703&key=5fc7b9a2033de8eca006799d9d9b967e`;
+  const cityUrl = `https://restapi.amap.com/v3/geocode/regeo?location=${longitude},${latitude}&key=5fc7b9a2033de8eca006799d9d9b967e`;
+  // const cityUrl = `https://restapi.amap.com/v3/geocode/regeo?location=113.191982,23.0987703&key=5fc7b9a2033de8eca006799d9d9b967e`;
   const response = await fetch(cityUrl);
   const jsonData = await response.json();
   console.log(jsonData);
